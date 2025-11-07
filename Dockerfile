@@ -1,11 +1,11 @@
-# Usa la imagen oficial de n8n
+# Imagen oficial de n8n
 FROM n8nio/n8n:latest
 
-# Define el puerto que usará Render
-ENV PORT=10000
+# Definir entorno de producción
+ENV NODE_ENV=production
 
-# Expone el puerto
-EXPOSE 10000
+# Exponer el puerto (5678)
+EXPOSE 5678
 
-# Comando para iniciar n8n
+# Comando de inicio
 CMD ["n8n", "start"]
